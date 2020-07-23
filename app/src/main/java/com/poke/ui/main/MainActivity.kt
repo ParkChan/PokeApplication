@@ -37,7 +37,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
         setupObserve()
         initAdapter()
         initListener()
-        mainViewModel.getPokemonList()
+        initPokemonData()
     }
 
     override fun bindViewModel() {
@@ -75,6 +75,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
             override fun afterTextChanged(s: Editable?) {}
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
                 val searchText = s.toString().trim()
                 if (searchText == searchFor)
                     return
@@ -89,4 +90,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
         })
     }
 
+    private fun initPokemonData(){
+        mainViewModel.getPokemonList()
+    }
 }

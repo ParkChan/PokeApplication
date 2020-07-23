@@ -5,12 +5,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.poke.domain.PokemonListRepository
 import com.poke.domain.entitiy.res.PokemonListResponse
 import com.poke.domain.entitiy.res.PokemonLocationListResponse
 import com.poke.domain.entitiy.res.mapToModel
 import com.poke.network.NetworkResult
 import com.poke.ui.main.model.PokemonModel
-import com.poke.ui.main.repository.PokemonListRepository
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 

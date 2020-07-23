@@ -1,10 +1,10 @@
-package com.poke.ui.main.repository
+package com.poke.domain
 
-import com.poke.domain.PokemonListDataSource
 import javax.inject.Inject
 
-class PokemonListRepository @Inject constructor(private val pokemonListDataSource: PokemonListDataSource){
-
+class PokemonListRepository @Inject constructor(
+    private val pokemonListDataSource: PokemonListDataSource
+) {
     suspend fun getPokemonList() =
         pokemonListDataSource.getPokemonList()
 

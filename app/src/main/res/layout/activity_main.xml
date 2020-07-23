@@ -21,14 +21,15 @@
             android:id="@+id/et_input"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:inputType="text"
-            android:importantForAutofill="no"
-            android:text="@{mainViewModel.searchName}"
             android:hint="@string/activity_main_hint_input"
-            />
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingStart="@dimen/activity_main_padding_horizontal"
+            android:paddingEnd="@dimen/activity_main_padding_horizontal"
+            android:text="@{mainViewModel.searchName}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_list"
@@ -48,6 +49,7 @@
             android:id="@+id/tv_empty_list"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/activity_main_margin_vertical"
             android:gravity="center"
             android:text="@{mainViewModel.isLoading ? @string/activity_main_init : @string/activity_main_no_list_data}"
             android:textSize="@dimen/item_pokemon_text_size"

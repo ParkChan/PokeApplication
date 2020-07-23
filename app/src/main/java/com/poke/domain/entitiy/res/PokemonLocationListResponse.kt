@@ -11,6 +11,7 @@ data class PokemonLocationListResponse(
     @field:Json(name = "pokemons")
     val pokemons: List<PokemonLocationResponse>? = null
 )
+
 fun PokemonLocationListResponse.mapToModel() =
     PokemonLocationListModel(
         pokemons = pokemons?.map { it.mapToModel() } ?: emptyList()

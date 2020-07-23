@@ -58,12 +58,12 @@ class MainViewModel @ViewModelInject constructor(
             }
         }
 
-        mapToHashSet(
-            mergePokeListAndLocationInfo(
-                pokemonListResponse = pokemonListResponse,
-                pokemonLocationListResponse = pokemonLocationListResponse
-            )
+        val mergeData = mergePokeListAndLocationInfo(
+            pokemonListResponse = pokemonListResponse,
+            pokemonLocationListResponse = pokemonLocationListResponse
         )
+
+        initPokemonData(mergeData)
 
         hideLoading()
     }
@@ -72,18 +72,19 @@ class MainViewModel @ViewModelInject constructor(
         pokemonListResponse: PokemonListResponse?,
         pokemonLocationListResponse: PokemonLocationListResponse?
     ): Map<Int, PokemonModel> {
-        if (pokemonListResponse != null && pokemonLocationListResponse != null) {
-
+        if (pokemonListResponse != null) {
             val pokemonMap =
                 pokemonListResponse.mapToModel().pokemons.map { it.id to it }.toMap()
 
-            val pokemonLocationMap =
-                pokemonLocationListResponse.mapToModel().pokemons.map { it.id to it }.toMap()
+            pokemonLocationListResponse?.run {
+                val pokemonLocationMap =
+                    this.mapToModel().pokemons.map { it.id to it }.toMap()
 
-            for ((id, data) in pokemonLocationMap) {
-                pokemonMap[id]?.apply {
-                    lat = data.lat
-                    lon = data.lon
+                for ((id, data) in pokemonLocationMap) {
+                    pokemonMap[id]?.apply {
+                        lat = data.lat
+                        lon = data.lon
+                    }
                 }
             }
             return pokemonMap
@@ -91,7 +92,7 @@ class MainViewModel @ViewModelInject constructor(
         return emptyMap()
     }
 
-    private fun mapToHashSet(map: Map<Int, PokemonModel>) {
+    private fun initPokemonData(map: Map<Int, PokemonModel>) {
         pokemonHashSet.clear()
         for ((_, data) in map) {
             pokemonHashSet.add(data)

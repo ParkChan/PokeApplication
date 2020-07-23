@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:paddingHorizontal="@dimen/item_pokemon_padding_horizontal"
             android:paddingVertical="@dimen/item_pokemon_padding_vertical"
-            android:text="@{pokemonModel.name}"
+            android:text="@{pokemonModel.filterName}"
             android:textColor="@color/color_ffffff"
             android:textSize="@dimen/item_pokemon_text_size"
             android:textStyle="bold"

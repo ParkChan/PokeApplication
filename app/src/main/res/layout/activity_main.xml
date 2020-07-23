@@ -17,6 +17,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="text"
+            android:importantForAutofill="no"
+            android:text="@{mainViewModel.searchName}"
+            android:hint="@string/activity_main_hint_input"
+            />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_list"
             replaceItems="@{mainViewModel.pokemonList}"
@@ -28,7 +41,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_input"
             tools:listitem="@layout/item_pokemon" />
 
         <TextView
@@ -36,7 +49,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:gravity="center"
-            android:text="@{mainViewModel.isLoading ? @string/activity_main_search : @string/activity_main_no_list_data}"
+            android:text="@{mainViewModel.isLoading ? @string/activity_main_init : @string/activity_main_no_list_data}"
             android:textSize="@dimen/item_pokemon_text_size"
             android:visibility="@{mainViewModel.pokemonList.size() > 0 ? View.GONE : View.VISIBLE}"
             app:layout_constraintBottom_toBottomOf="parent"

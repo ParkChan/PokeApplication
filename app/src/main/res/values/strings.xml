@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">PokeApplication</string>
 
-    <string name="activity_main_search">조회중입니다.</string>
+    <string name="activity_main_init">포켓몬 데이터를 불러오는 중입니다.</string>
     <string name="activity_main_no_list_data">검색결과가 없습니다.</string>
+    <string name="activity_main_hint_input">포켓몬 이름을 입력하세요.</string>
 
 </resources>

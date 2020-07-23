@@ -9,8 +9,8 @@ import com.poke.domain.entitiy.res.PokemonListResponse
 import com.poke.domain.entitiy.res.PokemonLocationListResponse
 import com.poke.domain.entitiy.res.mapToModel
 import com.poke.network.NetworkResult
-import com.poke.ui.main.repository.PokemonListRepository
 import com.poke.ui.main.model.PokemonModel
+import com.poke.ui.main.repository.PokemonListRepository
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
@@ -26,6 +26,11 @@ class MainViewModel @ViewModelInject constructor(
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> get() = _isLoading
+
+    private val _searchName = MutableLiveData<String>()
+    val searchName: LiveData<String> get() = _searchName
+
+    private val pokemonHashSet: MutableSet<PokemonModel> = HashSet()
 
     fun getPokemonList() = viewModelScope.launch {
         showLoading()
@@ -53,23 +58,70 @@ class MainViewModel @ViewModelInject constructor(
             }
         }
 
-        result(
-            pokemonListResponse = pokemonListResponse,
-            pokemonLocationListResponse = pokemonLocationListResponse
+        mapToHashSet(
+            mergePokeListAndLocationInfo(
+                pokemonListResponse = pokemonListResponse,
+                pokemonLocationListResponse = pokemonLocationListResponse
+            )
         )
+
         hideLoading()
     }
 
-    private fun result(
+    private fun mergePokeListAndLocationInfo(
         pokemonListResponse: PokemonListResponse?,
         pokemonLocationListResponse: PokemonLocationListResponse?
-    ) {
+    ): Map<Int, PokemonModel> {
         if (pokemonListResponse != null && pokemonLocationListResponse != null) {
-            val pokemonListModel = pokemonListResponse.mapToModel().pokemons
-            val pokemonLocationListModel = pokemonLocationListResponse.mapToModel().pokemons
-            _pokemonList.value = pokemonListModel
+
+            val pokemonMap =
+                pokemonListResponse.mapToModel().pokemons.map { it.id to it }.toMap()
+
+            val pokemonLocationMap =
+                pokemonLocationListResponse.mapToModel().pokemons.map { it.id to it }.toMap()
+
+            for ((id, data) in pokemonLocationMap) {
+                pokemonMap[id]?.apply {
+                    lat = data.lat
+                    lon = data.lon
+                }
+            }
+            return pokemonMap
+        }
+        return emptyMap()
+    }
+
+    private fun mapToHashSet(map: Map<Int, PokemonModel>) {
+        pokemonHashSet.clear()
+        for ((_, data) in map) {
+            pokemonHashSet.add(data)
         }
     }
+
+    fun searchPokemon(keyword: String) {
+        _searchName.value = keyword
+
+        if(keyword.isNotEmpty()){
+            val searchResult = mutableListOf<PokemonModel>()
+            val it = pokemonHashSet.iterator()
+            while (it.hasNext()) {
+                val data = it.next()
+                for (pokemonName in data.names) {
+                    if (pokemonName.contains(keyword)) {
+                        data.filterName = pokemonName
+                        searchResult.add(data)
+                    }
+                }
+            }
+            _pokemonList.value = searchResult
+        }else{
+            _pokemonList.value = emptyList()
+        }
+    }
+
+    private operator fun String.contains(other: String): Boolean =
+        this.contains(other, ignoreCase = true)
+
 
     private fun hideLoading() {
         _isLoading.value = false

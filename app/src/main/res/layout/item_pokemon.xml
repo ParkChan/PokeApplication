@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.content.Context" />
+
+        <variable
+            name="mainViewModel"
+            type="com.poke.ui.main.viewmodel.MainViewModel" />
+
+        <variable
+            name="pokemonModel"
+            type="com.poke.ui.main.model.PokemonModel" />
+
+        <variable
+            name="itemPosition"
+            type="int" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_000000">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/item_pokemon_padding_horizontal"
+            android:paddingVertical="@dimen/item_pokemon_padding_vertical"
+            android:text="@{pokemonModel.name}"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/item_pokemon_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

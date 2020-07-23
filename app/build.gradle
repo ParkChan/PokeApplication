@@ -43,6 +43,8 @@ dependencies {
     implementation JetBrain.KOTLIN_STDLIB
     implementation JetBrain.COROUTINES_CORE
 
+    implementation Google.MAPS
+
     testImplementation TestDependencies.JUNIT
     androidTestImplementation TestDependencies.EXT_JUNIT
     androidTestImplementation TestDependencies.ESPRESSO
@@ -61,7 +63,16 @@ dependencies {
 
     implementation AndroidDxDependencies.PAGING
 
-    implementation Google.MAPS
+    implementation DaggerHilt.ANDROID
+    implementation DaggerHilt.LIFECYCLE_VM
+    kapt DaggerHilt.ANDROID_COMPILER
+    kapt DaggerHilt.COMPILER
+    testImplementation DaggerHilt.TEST
+    // ...with Kotlin.
+    kaptTest DaggerHilt.ANDROID_COMPILER
+    androidTestImplementation DaggerHilt.TEST
+    // ...with Kotlin.
+    kaptAndroidTest DaggerHilt.ANDROID_COMPILER
 
     implementation NetworkDependencies.RETROFIT
     implementation NetworkDependencies.MOSHI_KOTLIN
@@ -69,12 +80,6 @@ dependencies {
     implementation NetworkDependencies.CONVERTER_MOSHI
     kapt NetworkDependencies.MOSHI_KOTLIN_CODEGEN
     implementation NetworkDependencies.LOGGING
-
-
-    implementation Dependencies.HILT_ANDROID
-    implementation Dependencies.HILT_LIFECYCLE_VM
-    kapt Dependencies.HILT_ANDROID_COMPILER
-    kapt Dependencies.HILT_COMPILER
 
     implementation Dependencies.LOGGER
 

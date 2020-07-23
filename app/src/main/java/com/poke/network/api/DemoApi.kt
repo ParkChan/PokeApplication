@@ -1,4 +1,4 @@
-package com.poke.network
+package com.poke.network.api
 
 import com.poke.domain.entitiy.res.PokemonListResponse
 import com.poke.domain.entitiy.res.PokemonLocationListResponse

@@ -60,6 +60,18 @@ object AndroidDxDependencies {
     const val PAGING = "androidx.paging:paging-runtime:$PAGING_VERSION"
 
 }
+object DaggerHilt {
+    private const val HILT_VER = "2.28-alpha"
+    private const val HILT_JETPACK_VER = "1.0.0-alpha01"
+
+    //dagger-hilt
+    const val ANDROID = "com.google.dagger:hilt-android:$HILT_VER"
+    const val ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:$HILT_VER"
+    const val LIFECYCLE_VM = "androidx.hilt:hilt-lifecycle-viewmodel:$HILT_JETPACK_VER"
+    const val COMPILER = "androidx.hilt:hilt-compiler:$HILT_JETPACK_VER"
+    const val TEST = "com.google.dagger:hilt-android-testing:$HILT_VER"
+
+}
 
 object NetworkDependencies {
     private const val RETROFIT_VERSION = "2.9.0"
@@ -77,17 +89,11 @@ object NetworkDependencies {
 
 object Dependencies {
 
-    private const val HILT_VER = "2.28-alpha"
-    private const val HILT_JETPACK_VER = "1.0.0-alpha01"
+
+
 
     private const val LOGGER_VERSION = "2.2.0"
     private const val GLIDE_VERSION = "4.11.0"
-
-    //dagger-hilt
-    const val HILT_ANDROID = "com.google.dagger:hilt-android:$HILT_VER"
-    const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:$HILT_VER"
-    const val HILT_LIFECYCLE_VM = "androidx.hilt:hilt-lifecycle-viewmodel:$HILT_JETPACK_VER"
-    const val HILT_COMPILER = "androidx.hilt:hilt-compiler:$HILT_JETPACK_VER"
 
     //Logger
     const val LOGGER = "com.orhanobut:logger:$LOGGER_VERSION"
@@ -95,7 +101,6 @@ object Dependencies {
     //Glide
     const val GLIDE = "com.github.bumptech.glide:glide:$GLIDE_VERSION"
     const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:$GLIDE_VERSION"
-
 
     //TedPermmision
     const val TED_PERMISION = "gun0912.ted:tedpermission-rx2:2.2.3"

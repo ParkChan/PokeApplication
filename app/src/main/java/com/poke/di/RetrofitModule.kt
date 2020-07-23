@@ -1,8 +1,8 @@
 package com.poke.di
 
 import com.poke.BuildConfig
-import com.poke.network.DemoApi
-import com.poke.network.PokeApi
+import com.poke.network.api.DemoApi
+import com.poke.network.api.PokeApi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module

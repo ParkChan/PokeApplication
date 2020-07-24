@@ -1,7 +1,7 @@
 package com.poke.network.api
 
-import com.poke.domain.entitiy.res.PokemonListResponse
-import com.poke.domain.entitiy.res.PokemonLocationListResponse
+import com.poke.data.response.PokemonListResponse
+import com.poke.data.response.PokemonLocationListResponse
 import retrofit2.http.GET
 
 interface DemoApi {

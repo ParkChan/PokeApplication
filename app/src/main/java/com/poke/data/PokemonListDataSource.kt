@@ -1,9 +1,9 @@
-package com.poke.domain
+package com.poke.data
 
-import com.poke.domain.entitiy.res.PokemonListResponse
-import com.poke.domain.entitiy.res.PokemonLocationListResponse
-import com.poke.network.api.DemoApi
+import com.poke.data.response.PokemonListResponse
+import com.poke.data.response.PokemonLocationListResponse
 import com.poke.network.NetworkResult
+import com.poke.network.api.DemoApi
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject

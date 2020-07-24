@@ -1,6 +1,5 @@
-package com.poke.domain.entitiy.res
+package com.poke.data.response
 
-import com.poke.domain.entitiy.SpritesResponse
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 

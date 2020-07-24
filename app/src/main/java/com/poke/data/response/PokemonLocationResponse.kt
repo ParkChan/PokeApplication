@@ -1,4 +1,4 @@
-package com.poke.domain.entitiy
+package com.poke.data.response
 
 import com.poke.ui.main.model.PokemonLocationModel
 import com.squareup.moshi.Json

@@ -1,4 +1,4 @@
-package com.poke.domain.entitiy
+package com.poke.data.response
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

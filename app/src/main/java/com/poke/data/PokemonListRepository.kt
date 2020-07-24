@@ -1,4 +1,4 @@
-package com.poke.domain
+package com.poke.data
 
 import javax.inject.Inject
 

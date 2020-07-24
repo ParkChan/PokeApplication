@@ -8,7 +8,7 @@
         <import type="android.view.View" />
 
         <variable
-            name="mainViewModel"
+            name="vm"
             type="com.poke.ui.main.viewmodel.MainViewModel" />
     </data>
 
@@ -26,18 +26,18 @@
             android:inputType="text"
             android:paddingStart="@dimen/activity_main_padding_horizontal"
             android:paddingEnd="@dimen/activity_main_padding_horizontal"
-            android:text="@{mainViewModel.searchName}"
+            android:text="@{vm.searchName}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_list"
-            replaceItems="@{mainViewModel.pokemonList}"
+            replaceItems="@{vm.pokemonList}"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scrollbars="vertical"
-            android:visibility="@{mainViewModel.pokemonList.size() > 0 ? View.VISIBLE : View.GONE}"
+            android:visibility="@{vm.pokemonList.size() > 0 ? View.VISIBLE : View.GONE}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,9 +51,9 @@
             android:layout_height="0dp"
             android:layout_marginBottom="@dimen/activity_main_margin_vertical"
             android:gravity="center"
-            android:text="@{mainViewModel.isLoading ? @string/activity_main_init : @string/activity_main_no_list_data}"
+            android:text="@{vm.isLoading ? @string/activity_main_init : @string/activity_main_no_list_data}"
             android:textSize="@dimen/item_pokemon_text_size"
-            android:visibility="@{mainViewModel.pokemonList.size() > 0 ? View.GONE : View.VISIBLE}"
+            android:visibility="@{vm.pokemonList.size() > 0 ? View.GONE : View.VISIBLE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
         <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="@{mainViewModel.isLoading ? View.VISIBLE : View.GONE}"
+            android:visibility="@{vm.isLoading ? View.VISIBLE : View.GONE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

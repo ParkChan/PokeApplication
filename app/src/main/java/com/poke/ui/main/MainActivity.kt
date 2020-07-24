@@ -15,7 +15,7 @@ import com.poke.R
 import com.poke.common.BaseActivity
 import com.poke.common.adapter.BaseRecyclerAdapter
 import com.poke.common.adapter.ViewHolderIdData
-import com.poke.common.component.ViewModelComponent
+import com.poke.common.component.BindViewModelComponent
 import com.poke.databinding.ActivityMainBinding
 import com.poke.ui.main.model.PokemonModel
 import com.poke.ui.main.viewmodel.MainViewModel
@@ -26,7 +26,7 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>(
     R.layout.activity_main
-), ViewModelComponent {
+), BindViewModelComponent {
 
     private val mainViewModel by viewModels<MainViewModel>()
 
@@ -41,7 +41,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
     }
 
     override fun bindViewModel() {
-        binding.mainViewModel = mainViewModel
+        binding.vm = mainViewModel
     }
 
     override fun setupObserve() {
@@ -52,11 +52,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
 
     private fun initAdapter() {
         val adapterViewModels = ArrayMap<Int, ViewModel>().apply {
-            this[BR.mainViewModel] = mainViewModel
+            this[BR.vm] = mainViewModel
         }
 
         val viewHolderIdData =
-            ViewHolderIdData(R.layout.item_pokemon, BR.pokemonModel, BR.itemPosition)
+            ViewHolderIdData(R.layout.item_pokemon, BR.pokemon_model, BR.position)
 
         val pokemonAdapter = BaseRecyclerAdapter<PokemonModel>(
             viewHolderIdData = viewHolderIdData,

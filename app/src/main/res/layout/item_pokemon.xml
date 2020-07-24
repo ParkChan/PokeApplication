@@ -9,15 +9,15 @@
         <import type="android.content.Context" />
 
         <variable
-            name="mainViewModel"
+            name="vm"
             type="com.poke.ui.main.viewmodel.MainViewModel" />
 
         <variable
-            name="pokemonModel"
+            name="pokemon_model"
             type="com.poke.ui.main.model.PokemonModel" />
 
         <variable
-            name="itemPosition"
+            name="position"
             type="int" />
     </data>
 
@@ -30,9 +30,10 @@
             android:id="@+id/tv_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> vm.onClick(pokemon_model)}"
             android:paddingHorizontal="@dimen/item_pokemon_padding_horizontal"
             android:paddingVertical="@dimen/item_pokemon_padding_vertical"
-            android:text="@{pokemonModel.filterName}"
+            android:text="@{pokemon_model.filterName}"
             android:textColor="@color/color_ffffff"
             android:textSize="@dimen/item_pokemon_text_size"
             android:textStyle="bold"

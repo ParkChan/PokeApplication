@@ -30,6 +30,9 @@ class MainViewModel @ViewModelInject constructor(
     private val _searchName = MutableLiveData<String>()
     val searchName: LiveData<String> get() = _searchName
 
+    private val _selectedItem = MutableLiveData<PokemonModel>()
+    val selectedItem: LiveData<PokemonModel> get() = _selectedItem
+
     private val pokemonHashSet: MutableSet<PokemonModel> = HashSet()
 
     fun getPokemonList() = viewModelScope.launch {
@@ -118,6 +121,10 @@ class MainViewModel @ViewModelInject constructor(
         }else{
             _pokemonList.value = emptyList()
         }
+    }
+
+    fun onClick(pokemonModel: PokemonModel){
+        _selectedItem.value = pokemonModel
     }
 
     private operator fun String.contains(other: String): Boolean =

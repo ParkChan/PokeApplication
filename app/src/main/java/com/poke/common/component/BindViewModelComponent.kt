@@ -1,6 +1,6 @@
 package com.poke.common.component
 
-interface ViewModelComponent {
+interface BindViewModelComponent {
     fun bindViewModel()
     fun setupObserve()
 }

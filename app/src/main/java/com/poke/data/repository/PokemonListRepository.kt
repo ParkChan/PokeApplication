@@ -1,5 +1,6 @@
-package com.poke.data
+package com.poke.data.repository
 
+import com.poke.data.datasource.PokemonListDataSource
 import javax.inject.Inject
 
 class PokemonListRepository @Inject constructor(

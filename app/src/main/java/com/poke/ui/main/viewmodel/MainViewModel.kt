@@ -5,8 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.poke.data.PokemonDetailInfoRepository
-import com.poke.data.PokemonListRepository
+import com.poke.data.repository.PokemonDetailInfoRepository
+import com.poke.data.repository.PokemonListRepository
 import com.poke.data.response.PokemonDetailInfoResponse
 import com.poke.data.response.PokemonListResponse
 import com.poke.data.response.PokemonLocationListResponse

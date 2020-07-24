@@ -1,4 +1,4 @@
-package com.poke.data
+package com.poke.data.datasource
 
 import com.poke.data.response.PokemonDetailInfoResponse
 import com.poke.network.NetworkResult

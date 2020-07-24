@@ -5,8 +5,11 @@ data class PokemonModel(
     val names: List<String> = emptyList(),
     var lat: Double = 0.0,
     var lon: Double = 0.0,
-    var filterName: String = ""
+    var filterName: String = "",
+    var detailInfo: PokemonDetailInfoModel = PokemonDetailInfoModel()
 ) {
     fun isLocation(): Boolean = lat > 0 && lon > 0
-    fun getName(): String = names[0]
+    fun getAllName(): String = names.joinToString(
+        separator = "/"
+    )
 }

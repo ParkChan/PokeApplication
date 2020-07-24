@@ -2,12 +2,12 @@ package com.poke.network.api
 
 import com.poke.data.response.PokemonDetailInfoResponse
 import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.Path
 
 interface PokeApi {
 
-    @GET("pokemon")
+    @GET("pokemon/{id}")
     suspend fun getPokemonDetailInfoAsync(
-        @Query("id") id: Int
+        @Path("id") id: Int
     ): PokemonDetailInfoResponse
 }

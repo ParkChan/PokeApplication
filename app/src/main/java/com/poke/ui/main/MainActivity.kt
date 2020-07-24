@@ -29,6 +29,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
 ), BindViewModelComponent {
 
     private val mainViewModel by viewModels<MainViewModel>()
+    private val pokemonDialog = PokemonDialog()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +46,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
     }
 
     override fun setupObserve() {
+        mainViewModel.selectedItem.observe(
+            this,
+            Observer {
+                pokemonDialog.setData(it)
+                pokemonDialog.show(supportFragmentManager, getString(R.string.dialog_pokemon_tag))
+            }
+        )
+
         mainViewModel.errMsg.observe(this, Observer {
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
         })
@@ -69,8 +78,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
         binding.rvList.addItemDecoration(decoration)
     }
 
-    private fun initListener(){
-        binding.etInput.addTextChangedListener(object: TextWatcher {
+    private fun initListener() {
+        binding.etInput.addTextChangedListener(object : TextWatcher {
             private var searchFor = ""
             override fun afterTextChanged(s: Editable?) {}
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -90,7 +99,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
         })
     }
 
-    private fun initPokemonData(){
+    private fun initPokemonData() {
         mainViewModel.getPokemonList()
     }
 }

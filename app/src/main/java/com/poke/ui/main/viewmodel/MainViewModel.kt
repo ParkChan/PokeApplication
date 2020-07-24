@@ -5,7 +5,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.poke.data.PokemonDetailInfoRepository
 import com.poke.data.PokemonListRepository
+import com.poke.data.response.PokemonDetailInfoResponse
 import com.poke.data.response.PokemonListResponse
 import com.poke.data.response.PokemonLocationListResponse
 import com.poke.data.response.mapToModel
@@ -15,7 +17,8 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class MainViewModel @ViewModelInject constructor(
-    private val pokemonListRepository: PokemonListRepository
+    private val pokemonListRepository: PokemonListRepository,
+    private val pokemonDetailInfoRepository: PokemonDetailInfoRepository
 ) : ViewModel() {
 
     private val _pokemonList = MutableLiveData<List<PokemonModel>>()
@@ -61,12 +64,12 @@ class MainViewModel @ViewModelInject constructor(
             }
         }
 
-        val mergeData = mergePokeListAndLocationInfo(
+        mergePokeListAndLocationInfo(
             pokemonListResponse = pokemonListResponse,
             pokemonLocationListResponse = pokemonLocationListResponse
-        )
-
-        initPokemonData(mergeData)
+        ).let {
+            initPokemonData(it)
+        }
 
         hideLoading()
     }
@@ -105,7 +108,7 @@ class MainViewModel @ViewModelInject constructor(
     fun searchPokemon(keyword: String) {
         _searchName.value = keyword
 
-        if(keyword.isNotEmpty()){
+        if (keyword.isNotEmpty()) {
             val searchResult = mutableListOf<PokemonModel>()
             val it = pokemonHashSet.iterator()
             while (it.hasNext()) {
@@ -118,18 +121,39 @@ class MainViewModel @ViewModelInject constructor(
                 }
             }
             _pokemonList.value = searchResult
-        }else{
+        } else {
             _pokemonList.value = emptyList()
         }
     }
 
-    fun onClick(pokemonModel: PokemonModel){
+    fun onClick(pokemonModel: PokemonModel) = viewModelScope.launch {
+        showLoading()
+
+        var pokemonDetailInfoResponse: PokemonDetailInfoResponse? = null
+
+        val pokemonDetailInfoDeferred =
+            async { pokemonDetailInfoRepository.getPokemonDetailInfo(pokemonModel.id) }
+
+        when (val networkResult = pokemonDetailInfoDeferred.await()) {
+            is NetworkResult.Success -> {
+                pokemonDetailInfoResponse = networkResult.data
+            }
+            is NetworkResult.Failure -> {
+                _errMsg.value = networkResult.exception.message
+            }
+        }
+
+        pokemonDetailInfoResponse?.let {
+            pokemonModel.detailInfo = pokemonDetailInfoResponse.mapToModel()
+        }
+
         _selectedItem.value = pokemonModel
+
+        hideLoading()
     }
 
     private operator fun String.contains(other: String): Boolean =
         this.contains(other, ignoreCase = true)
-
 
     private fun hideLoading() {
         _isLoading.value = false

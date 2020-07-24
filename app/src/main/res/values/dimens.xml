@@ -10,5 +10,6 @@
     <dimen name="item_pokemon_padding_vertical">12dp</dimen>
     <dimen name="item_pokemon_padding_horizontal">12dp</dimen>
 
+    <dimen name="dialog_pokemon_padding">20dp</dimen>
 
 </resources>

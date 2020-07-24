@@ -5,4 +5,12 @@
     <string name="activity_main_no_list_data">검색결과가 없습니다.</string>
     <string name="activity_main_hint_input">포켓몬 이름을 입력하세요.</string>
 
+    <string name="dialog_pokemon_tag">dialog_pokemon_tag</string>
+    <string name="dialog_pokemon_btn_text_confirm">확인</string>
+    <string name="dialog_pokemon_contentDescription_map">지도보기버튼</string>
+    <string name="dialog_pokemon_contentDescription_picture">포켓몬 이미지</string>
+    <string name="dialog_pokemon_formatter_name">[포켓몬 이름]\n%s</string>
+    <string name="dialog_pokemon_formatter_height">[키 정보]\n%s</string>
+    <string name="dialog_pokemon_formatter_weight">[몸무게 정보]\n%s</string>
+
 </resources>

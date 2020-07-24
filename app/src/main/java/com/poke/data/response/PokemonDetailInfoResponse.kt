@@ -1,5 +1,6 @@
 package com.poke.data.response
 
+import com.poke.ui.main.model.PokemonDetailInfoModel
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -14,3 +15,10 @@ data class PokemonDetailInfoResponse(
     @field:Json(name = "weight")
     val weight: Int? = null
 )
+
+fun PokemonDetailInfoResponse.mapToModel() =
+    PokemonDetailInfoModel(
+        sprites = sprites.mapToModel(),
+        height = height ?: 0,
+        weight = weight ?: 0
+    )

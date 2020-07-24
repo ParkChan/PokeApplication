@@ -1,5 +1,6 @@
 package com.poke.data.response
 
+import com.poke.ui.main.model.SpritesModel
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -12,20 +13,33 @@ data class SpritesResponse(
     val backFemale: String? = null,
 
     @field:Json(name = "back_shiny")
-    val back_shiny: String? = null,
+    val backShiny: String? = null,
 
     @field:Json(name = "back_shiny_female")
-    val back_shiny_female: String? = null,
+    val backShinyFemale: String? = null,
 
     @field:Json(name = "front_default")
-    val front_default: String? = null,
+    val frontDefault: String? = null,
 
     @field:Json(name = "front_female")
-    val front_female: String? = null,
+    val frontFemale: String? = null,
 
     @field:Json(name = "front_shiny")
-    val front_shiny: String? = null,
+    val frontShiny: String? = null,
 
     @field:Json(name = "front_shiny_female")
-    val front_shiny_female: String? = null
+    val frontShinyFemale: String? = null
 )
+
+fun SpritesResponse?.mapToModel() = this?.let {
+    SpritesModel(
+        backDefault = backDefault ?: "",
+        backFemale = backFemale ?: "",
+        backShiny = backShiny ?: "",
+        backShinyFemale = backShinyFemale ?: "",
+        frontDefault = frontDefault ?: "",
+        frontFemale = frontFemale ?: "",
+        frontShiny = frontShiny ?: "",
+        frontShinyFemale = frontShinyFemale ?: ""
+    )
+} ?: SpritesModel()

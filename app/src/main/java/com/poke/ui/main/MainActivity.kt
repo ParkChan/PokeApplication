@@ -6,6 +6,7 @@ import android.text.TextWatcher
 import android.util.ArrayMap
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.lifecycleScope
@@ -16,7 +17,9 @@ import com.poke.common.BaseActivity
 import com.poke.common.adapter.BaseRecyclerAdapter
 import com.poke.common.adapter.ViewHolderIdData
 import com.poke.common.component.BindViewModelComponent
+import com.poke.common.key.BUNDLE_POKEMON_DATA_KEY
 import com.poke.databinding.ActivityMainBinding
+import com.poke.ui.dialog.PokemonDialog
 import com.poke.ui.main.model.PokemonModel
 import com.poke.ui.main.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -50,7 +53,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
             this,
             Observer {
                 if(!pokemonDialog.isAdded){
-                    pokemonDialog.setData(it)
+                    pokemonDialog.arguments = bundleOf(BUNDLE_POKEMON_DATA_KEY to it)
                     pokemonDialog.show(supportFragmentManager, getString(R.string.dialog_pokemon_tag))
                 }
             }

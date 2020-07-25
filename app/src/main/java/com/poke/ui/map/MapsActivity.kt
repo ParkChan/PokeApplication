@@ -13,6 +13,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.poke.R
 import com.poke.common.BaseActivity
 import com.poke.common.component.BindViewModelComponent
+import com.poke.common.key.BUNDLE_POKEMON_DATA_KEY
 import com.poke.databinding.ActivityMapsBinding
 import com.poke.ui.main.model.PokemonModel
 
@@ -42,7 +43,7 @@ class MapsActivity : BaseActivity<ActivityMapsBinding>(R.layout.activity_maps), 
     override fun bindViewModel() {
         binding.vm = viewModel.apply {
             setUpPokemonModel(
-                (intent.extras?.get("pokemonModel") as? PokemonModel) ?: PokemonModel()
+                (intent.extras?.get(BUNDLE_POKEMON_DATA_KEY) as? PokemonModel) ?: PokemonModel()
             )
         }
     }

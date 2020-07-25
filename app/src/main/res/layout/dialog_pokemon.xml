@@ -7,12 +7,12 @@
         <import type="android.view.View" />
 
         <variable
-            name="pokemon_model"
-            type="com.poke.ui.main.model.PokemonModel" />
+            name="vm"
+            type="com.poke.ui.dialog.PokemonDetailViewModel" />
 
         <variable
             name="pokemonDialog"
-            type="com.poke.ui.main.PokemonDialog" />
+            type="com.poke.ui.dialog.PokemonDialog" />
 
     </data>
 
@@ -25,7 +25,7 @@
         <TextView
             android:id="@+id/tv_name"
             format="@{@string/dialog_pokemon_formatter_name}"
-            text="@{pokemon_model.getAllName}"
+            text="@{vm.pokemonModel.getAllName}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingHorizontal="@dimen/common_padding_horizontal"
@@ -44,14 +44,14 @@
             android:layout_height="50dp"
             android:background="@drawable/ic_map"
             android:contentDescription="@string/dialog_pokemon_contentDescription_map"
-            android:onClick="@{(view) -> pokemonDialog.onClickMap(pokemon_model)}"
-            android:visibility="@{pokemon_model.isLocation() ? View.VISIBLE : View.GONE}"
+            android:onClick="@{(view) -> pokemonDialog.onClickMap(vm.pokemonModel)}"
+            android:visibility="@{vm.pokemonModel.isLocation() ? View.VISIBLE : View.GONE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/iv_picture"
-            setPokemonThumb="@{pokemon_model.detailInfo.sprites.pokemonImageUri}"
+            setPokemonThumb="@{vm.pokemonModel.detailInfo.sprites.pokemonImageUri}"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:contentDescription="@string/dialog_pokemon_contentDescription_picture"
@@ -62,7 +62,7 @@
         <TextView
             android:id="@+id/tv_height"
             format="@{@string/dialog_pokemon_formatter_height}"
-            text="@{Integer.toString(pokemon_model.detailInfo.height)}"
+            text="@{Integer.toString(vm.pokemonModel.detailInfo.height)}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingHorizontal="@dimen/common_padding_horizontal"
@@ -76,7 +76,7 @@
         <TextView
             android:id="@+id/tv_weight"
             format="@{@string/dialog_pokemon_formatter_weight}"
-            text="@{Integer.toString(pokemon_model.detailInfo.weight)}"
+            text="@{Integer.toString(vm.pokemonModel.detailInfo.weight)}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingHorizontal="@dimen/common_padding_horizontal"

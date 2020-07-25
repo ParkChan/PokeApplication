@@ -40,7 +40,8 @@ class PokemonDialog : BaseFragmentDialog<DialogPokemonBinding>(
 
     override fun bindViewModel() {
         binding.vm = viewModel
-        val data = arguments?.get(BUNDLE_POKEMON_DATA_KEY) as? PokemonModel ?: PokemonModel()
+        val data =
+            arguments?.get(BUNDLE_POKEMON_DATA_KEY) as? PokemonModel ?: PokemonModel()
         viewModel.setUpPokemonModel(data)
         binding.pokemonDialog = this
 

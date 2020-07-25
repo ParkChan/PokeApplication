@@ -124,11 +124,9 @@ class MainViewModel @ViewModelInject constructor(
         }
     }
 
-    fun onClick(pokemonModel: PokemonModel) = viewModelScope.launch {
+    private fun getPokemonDetailInfo(pokemonModel: PokemonModel) = viewModelScope.launch {
         showLoading()
-
         var pokemonDetailInfoResponse: PokemonDetailInfoResponse? = null
-
         val pokemonDetailInfoDeferred =
             async { pokemonDetailInfoRepository.getPokemonDetailInfo(pokemonModel.id) }
 
@@ -146,8 +144,11 @@ class MainViewModel @ViewModelInject constructor(
         }
 
         _selectedItem.value = pokemonModel
-
         hideLoading()
+    }
+
+    fun onClick(pokemonModel: PokemonModel) {
+        getPokemonDetailInfo(pokemonModel)
     }
 
     private operator fun String.contains(other: String): Boolean =

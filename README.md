@@ -23,4 +23,4 @@
 * Glide
 
 ### Initial screen
-![ezgif-4-35148996eb82](https://user-images.githubusercontent.com/7857824/88456943-5ea16e00-cebd-11ea-8b59-bf431f255d7b.gif)
+![device-2020-07-25-213201](https://user-images.githubusercontent.com/7857824/88457096-a1177a80-cebe-11ea-9000-6975e646a41c.gif)

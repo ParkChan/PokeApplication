@@ -4,9 +4,16 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="pokemon_model"
             type="com.poke.ui.main.model.PokemonModel" />
+
+        <variable
+            name="pokemonDialog"
+            type="com.poke.ui.main.PokemonDialog" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,10 +28,10 @@
             text="@{pokemon_model.getAllName}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="@dimen/item_pokemon_padding_horizontal"
-            android:paddingVertical="@dimen/item_pokemon_padding_vertical"
+            android:paddingHorizontal="@dimen/common_padding_horizontal"
+            android:paddingVertical="@dimen/common_padding_vertical"
             android:textColor="@color/color_ffffff"
-            android:textSize="@dimen/item_pokemon_text_size"
+            android:textSize="@dimen/common_text_size"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/ib_map"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +44,8 @@
             android:layout_height="50dp"
             android:background="@drawable/ic_map"
             android:contentDescription="@string/dialog_pokemon_contentDescription_map"
+            android:onClick="@{(view) -> pokemonDialog.onClickMap(pokemon_model)}"
+            android:visibility="@{pokemon_model.isLocation() ? View.VISIBLE : View.GONE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,28 +61,28 @@
 
         <TextView
             android:id="@+id/tv_height"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="@dimen/item_pokemon_padding_horizontal"
-            android:paddingVertical="@dimen/item_pokemon_padding_vertical"
             format="@{@string/dialog_pokemon_formatter_height}"
             text="@{Integer.toString(pokemon_model.detailInfo.height)}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/common_padding_horizontal"
+            android:paddingVertical="@dimen/common_padding_vertical"
             android:textColor="@color/color_ffffff"
-            android:textSize="@dimen/item_pokemon_text_size"
+            android:textSize="@dimen/common_text_size"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_picture" />
 
         <TextView
             android:id="@+id/tv_weight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="@dimen/item_pokemon_padding_horizontal"
-            android:paddingVertical="@dimen/item_pokemon_padding_vertical"
             format="@{@string/dialog_pokemon_formatter_weight}"
             text="@{Integer.toString(pokemon_model.detailInfo.weight)}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/common_padding_horizontal"
+            android:paddingVertical="@dimen/common_padding_vertical"
             android:textColor="@color/color_ffffff"
-            android:textSize="@dimen/item_pokemon_text_size"
+            android:textSize="@dimen/common_text_size"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_height" />
@@ -82,13 +91,14 @@
             android:id="@+id/btn_confirm"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:onClick="@{(view) -> pokemonDialog.onClickConfirm()}"
             android:text="@string/dialog_pokemon_btn_text_confirm"
             android:textColor="@color/color_000000"
-            android:textSize="@dimen/item_pokemon_text_size"
+            android:textSize="@dimen/common_text_size"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="50dp"
             app:layout_constraintTop_toBottomOf="@id/tv_weight" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

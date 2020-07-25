@@ -13,14 +13,14 @@ data class PokemonLocationResponse(
     @field:Json(name = "lat")
     val lat: Double? = null,
 
-    @field:Json(name = "lon")
-    val lon: Double? = null
+    @field:Json(name = "lng")
+    val lng: Double? = null
 )
 
 fun PokemonLocationResponse?.mapToModel() = this?.let {
     PokemonLocationModel(
         id = id ?: 0,
         lat = lat ?: 0.0,
-        lon = lon ?: 0.0
+        lng = lng ?: 0.0
     )
 } ?: PokemonLocationModel()

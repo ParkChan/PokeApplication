@@ -80,16 +80,14 @@ class MainViewModel @ViewModelInject constructor(
     ): Map<Int, PokemonModel> {
         if (pokemonListResponse != null) {
             val pokemonMap =
-                pokemonListResponse.mapToModel().pokemons.map { it.id to it }.toMap()
+                pokemonListResponse.mapToModel().pokemonList.map { it.id to it }.toMap()
 
             pokemonLocationListResponse?.run {
-                val pokemonLocationMap =
-                    this.mapToModel().pokemons.map { it.id to it }.toMap()
+                val pokemonLocationList = this.mapToModel().locationList
 
-                for ((id, data) in pokemonLocationMap) {
-                    pokemonMap[id]?.apply {
-                        lat = data.lat
-                        lon = data.lon
+                for (pokemonLocation in pokemonLocationList) {
+                    pokemonMap[pokemonLocation.id]?.apply {
+                        locationList.add(pokemonLocation)
                     }
                 }
             }

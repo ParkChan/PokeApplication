@@ -13,4 +13,6 @@
     <string name="dialog_pokemon_formatter_height">[키 정보]\n%s</string>
     <string name="dialog_pokemon_formatter_weight">[몸무게 정보]\n%s</string>
 
+    <string name="activity_maps_formatter_title">%s의 서식지</string>
+
 </resources>

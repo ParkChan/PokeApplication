@@ -7,10 +7,10 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class PokemonLocationListResponse(
     @field:Json(name = "pokemons")
-    val pokemons: List<PokemonLocationResponse>? = null
+    val locationList: List<PokemonLocationResponse>? = null
 )
 
 fun PokemonLocationListResponse.mapToModel() =
     PokemonLocationListModel(
-        pokemons = pokemons?.map { it.mapToModel() } ?: emptyList()
+        locationList = locationList?.map { it.mapToModel() } ?: emptyList()
     )

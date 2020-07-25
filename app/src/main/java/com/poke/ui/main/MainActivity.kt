@@ -28,7 +28,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
     R.layout.activity_main
 ), BindViewModelComponent {
 
-    private val mainViewModel by viewModels<MainViewModel>()
+    private val viewModel by viewModels<MainViewModel>()
     private val pokemonDialog = PokemonDialog()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,26 +42,28 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
     }
 
     override fun bindViewModel() {
-        binding.vm = mainViewModel
+        binding.vm = viewModel
     }
 
     override fun setupObserve() {
-        mainViewModel.selectedItem.observe(
+        viewModel.selectedItem.observe(
             this,
             Observer {
-                pokemonDialog.setData(it)
-                pokemonDialog.show(supportFragmentManager, getString(R.string.dialog_pokemon_tag))
+                if(!pokemonDialog.isAdded){
+                    pokemonDialog.setData(it)
+                    pokemonDialog.show(supportFragmentManager, getString(R.string.dialog_pokemon_tag))
+                }
             }
         )
 
-        mainViewModel.errMsg.observe(this, Observer {
+        viewModel.errMsg.observe(this, Observer {
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
         })
     }
 
     private fun initAdapter() {
         val adapterViewModels = ArrayMap<Int, ViewModel>().apply {
-            this[BR.vm] = mainViewModel
+            this[BR.vm] = viewModel
         }
 
         val viewHolderIdData =
@@ -93,13 +95,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
                     delay(300)
                     if (searchText != searchFor)
                         return@launch
-                    mainViewModel.searchPokemon(searchFor)
+                    viewModel.searchPokemon(searchFor)
                 }
             }
         })
     }
 
     private fun initPokemonData() {
-        mainViewModel.getPokemonList()
+        viewModel.getPokemonList()
     }
 }

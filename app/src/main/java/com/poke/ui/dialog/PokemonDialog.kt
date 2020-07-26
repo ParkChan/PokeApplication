@@ -12,7 +12,9 @@ import com.poke.common.key.BUNDLE_POKEMON_DATA_KEY
 import com.poke.databinding.DialogPokemonBinding
 import com.poke.ui.main.model.PokemonModel
 import com.poke.ui.map.MapsActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PokemonDialog : BaseFragmentDialog<DialogPokemonBinding>(
     R.layout.dialog_pokemon
 ), BindViewModelComponent {

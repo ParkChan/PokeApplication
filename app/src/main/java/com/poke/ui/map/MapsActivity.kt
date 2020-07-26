@@ -16,8 +16,9 @@ import com.poke.common.component.BindViewModelComponent
 import com.poke.common.key.BUNDLE_POKEMON_DATA_KEY
 import com.poke.databinding.ActivityMapsBinding
 import com.poke.ui.main.model.PokemonModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MapsActivity : BaseActivity<ActivityMapsBinding>(R.layout.activity_maps), OnMapReadyCallback,
     BindViewModelComponent {
 

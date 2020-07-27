@@ -38,7 +38,7 @@ class MainViewModel @ViewModelInject constructor(
 
     private val pokemonHashSet: MutableSet<PokemonModel> = HashSet()
 
-    fun getPokemonList() = viewModelScope.launch {
+    fun initData() = viewModelScope.launch {
         showLoading()
         val pokemonListDeferred = async { pokemonListRepository.getPokemonList() }
         val locationListDeferrd = async { pokemonListRepository.getLocationList() }

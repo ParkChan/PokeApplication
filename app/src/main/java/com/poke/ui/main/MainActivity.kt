@@ -105,6 +105,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
     }
 
     private fun initPokemonData() {
-        viewModel.getPokemonList()
+        viewModel.initData()
     }
 }

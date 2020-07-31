@@ -13,7 +13,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.poke.R
 import com.poke.common.BaseActivity
 import com.poke.common.component.BindViewModelComponent
-import com.poke.common.key.BUNDLE_POKEMON_DATA_KEY
+import com.poke.common.key.BundleKey
 import com.poke.databinding.ActivityMapsBinding
 import com.poke.ui.main.model.PokemonModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,22 +39,16 @@ class MapsActivity : BaseActivity<ActivityMapsBinding>(R.layout.activity_maps), 
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
         setupObserve()
+        drawMarker()
     }
 
     override fun bindViewModel() {
-        binding.vm = viewModel.apply {
-            setUpPokemonModel(
-                (intent.extras?.get(BUNDLE_POKEMON_DATA_KEY) as? PokemonModel) ?: PokemonModel()
-            )
-        }
+        binding.vm = viewModel
     }
 
     override fun setupObserve() {
-
         viewModel.pokemonModel.observe(this, Observer {
-
             val builder = LatLngBounds.Builder()
-
             for (PokemonLocationModel in it.locationList) {
                 val location = LatLng(PokemonLocationModel.lat, PokemonLocationModel.lng)
                 val markerOptions = MarkerOptions().position(location).title(it.filterName)
@@ -71,5 +65,11 @@ class MapsActivity : BaseActivity<ActivityMapsBinding>(R.layout.activity_maps), 
             map.animateCamera(cameraUpdate)
 
         })
+    }
+    private fun drawMarker(){
+        val data = (intent.extras?.get(BundleKey.BUNDLE_POKEMON_DATA_KEY) as? PokemonModel)
+        viewModel.apply {
+            setUpPokemonModel(data ?: PokemonModel())
+        }
     }
 }

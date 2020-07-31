@@ -17,7 +17,7 @@ import com.poke.common.BaseActivity
 import com.poke.common.adapter.BaseRecyclerAdapter
 import com.poke.common.adapter.ViewHolderIdData
 import com.poke.common.component.BindViewModelComponent
-import com.poke.common.key.BUNDLE_POKEMON_DATA_KEY
+import com.poke.common.key.BundleKey
 import com.poke.databinding.ActivityMainBinding
 import com.poke.ui.dialog.PokemonDialog
 import com.poke.ui.main.model.PokemonModel
@@ -53,7 +53,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
             this,
             Observer {
                 if(!pokemonDialog.isAdded){
-                    pokemonDialog.arguments = bundleOf(BUNDLE_POKEMON_DATA_KEY to it)
+                    pokemonDialog.arguments = bundleOf(BundleKey.BUNDLE_POKEMON_DATA_KEY to it)
                     pokemonDialog.show(supportFragmentManager, getString(R.string.dialog_pokemon_tag))
                 }
             }

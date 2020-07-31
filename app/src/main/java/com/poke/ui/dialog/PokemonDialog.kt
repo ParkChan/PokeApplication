@@ -8,7 +8,7 @@ import androidx.fragment.app.viewModels
 import com.poke.R
 import com.poke.common.BaseFragmentDialog
 import com.poke.common.component.BindViewModelComponent
-import com.poke.common.key.BUNDLE_POKEMON_DATA_KEY
+import com.poke.common.key.BundleKey
 import com.poke.databinding.DialogPokemonBinding
 import com.poke.ui.main.model.PokemonModel
 import com.poke.ui.map.MapsActivity
@@ -35,7 +35,7 @@ class PokemonDialog : BaseFragmentDialog<DialogPokemonBinding>(
         pokemonModel?.let {
             val intent = Intent(context, MapsActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-            intent.putExtras(bundleOf(BUNDLE_POKEMON_DATA_KEY to pokemonModel))
+            intent.putExtras(bundleOf(BundleKey.BUNDLE_POKEMON_DATA_KEY to pokemonModel))
             startActivity(intent)
         }
     }
@@ -43,7 +43,7 @@ class PokemonDialog : BaseFragmentDialog<DialogPokemonBinding>(
     override fun bindViewModel() {
         binding.vm = viewModel
         val data =
-            arguments?.get(BUNDLE_POKEMON_DATA_KEY) as? PokemonModel ?: PokemonModel()
+            arguments?.get(BundleKey.BUNDLE_POKEMON_DATA_KEY) as? PokemonModel ?: PokemonModel()
         viewModel.setUpPokemonModel(data)
         binding.pokemonDialog = this
 

@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.poke.common.viewmodel.SingleLiveData
 import com.poke.data.repository.PokemonDetailInfoRepository
 import com.poke.data.repository.PokemonListRepository
 import com.poke.data.response.PokemonDetailInfoResponse
@@ -24,7 +25,7 @@ class MainViewModel @ViewModelInject constructor(
     private val _pokemonList = MutableLiveData<List<PokemonModel>>()
     val pokemonList: LiveData<List<PokemonModel>> get() = _pokemonList
 
-    private val _errMsg = MutableLiveData<String>()
+    private val _errMsg = SingleLiveData<String>()
     val errMsg: LiveData<String> get() = _errMsg
 
     private val _isLoading = MutableLiveData<Boolean>()

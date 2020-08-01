@@ -12,7 +12,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.DialogFragment
 
-
 abstract class BaseFragmentDialog<VDB : ViewDataBinding>(
     @LayoutRes
     private val resource: Int

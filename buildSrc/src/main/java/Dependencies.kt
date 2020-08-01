@@ -10,6 +10,7 @@ object RootConfig {
 
 object AndroidConfig {
     const val COMPILE_AND_TARGET_SDK = 29       //Q
+    const val BUILD_TOOLS_VERSION = "29.0.3"
     const val APPLICATION_ID = "com.poke"
     const val MIN_SDK = 21      //Lollipop
     const val VERSION_CODE = 1

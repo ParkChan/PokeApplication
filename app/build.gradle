@@ -6,7 +6,7 @@ apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     compileSdkVersion AndroidConfig.COMPILE_AND_TARGET_SDK
-    buildToolsVersion "29.0.3"
+    buildToolsVersion AndroidConfig.BUILD_TOOLS_VERSION
 
     defaultConfig {
         applicationId AndroidConfig.APPLICATION_ID

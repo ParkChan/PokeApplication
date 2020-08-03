@@ -1,5 +1,6 @@
 package com.poke.data.datasource
 
+import com.poke.data.repository.PokemonListRepository
 import com.poke.data.response.PokemonListResponse
 import com.poke.data.response.PokemonLocationListResponse
 import com.poke.network.NetworkResult
@@ -8,10 +9,10 @@ import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
 
-class PokemonListDataSource @Inject constructor(
+open class PokemonListDataSource @Inject constructor(
     private val demoApi: DemoApi
-) {
-    suspend fun getPokemonList() : NetworkResult<PokemonListResponse>{
+) : PokemonListRepository.PokemonListRepositoryComponent {
+    override suspend fun getPokemonList() : NetworkResult<PokemonListResponse>{
         return try{
             NetworkResult.Success(demoApi.getPokemonListAsync())
         }catch (e: IOException) {
@@ -23,7 +24,7 @@ class PokemonListDataSource @Inject constructor(
         }
     }
 
-    suspend fun getLocationList() : NetworkResult<PokemonLocationListResponse>{
+    override suspend fun getLocationList() : NetworkResult<PokemonLocationListResponse>{
         return try{
             NetworkResult.Success(demoApi.getPokemonLocationAsync()
             )

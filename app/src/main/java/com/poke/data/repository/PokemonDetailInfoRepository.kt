@@ -1,11 +1,16 @@
 package com.poke.data.repository
 
-import com.poke.data.datasource.PokemonDetailInfoDataSource
+import com.poke.data.response.PokemonDetailInfoResponse
+import com.poke.network.NetworkResult
 import javax.inject.Inject
 
 class PokemonDetailInfoRepository @Inject constructor(
-    private val pokemonDetailInfoDataSource: PokemonDetailInfoDataSource
-) {
+    private val pokemonDetailInfoRepositoryComponent: PokemonDetailInfoRepositoryComponent
+){
     suspend fun getPokemonDetailInfo(id: Int) =
-        pokemonDetailInfoDataSource.getPokemonDetailInfo(id)
+        pokemonDetailInfoRepositoryComponent.getPokemonDetailInfo(id)
+
+    interface PokemonDetailInfoRepositoryComponent{
+        suspend fun getPokemonDetailInfo(id: Int) : NetworkResult<PokemonDetailInfoResponse>
+    }
 }

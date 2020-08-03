@@ -32,7 +32,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
 ), BindViewModelComponent {
 
     private val viewModel by viewModels<MainViewModel>()
-    private val pokemonDialog = PokemonDialog()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,15 +50,23 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
     override fun setupObserve() {
         viewModel.selectedItem.observe(
             this,
-            Observer {
-                if(!pokemonDialog.isAdded){
-                    pokemonDialog.arguments = bundleOf(BundleKey.BUNDLE_POKEMON_DATA_KEY to it)
-                    pokemonDialog.show(supportFragmentManager, getString(R.string.dialog_pokemon_tag))
+            Observer { pokemonModel ->
+                val fragment =
+                    supportFragmentManager.findFragmentByTag(getString(R.string.dialog_pokemon_tag))
+                fragment ?: let {
+                    val pokemonDialog = PokemonDialog()
+                    pokemonDialog.arguments =
+                        bundleOf(BundleKey.BUNDLE_POKEMON_DATA_KEY to pokemonModel)
+                    pokemonDialog.show(
+                        supportFragmentManager,
+                        getString(R.string.dialog_pokemon_tag)
+                    )
                 }
             }
         )
 
-        viewModel.errMsg.observe(this, Observer {
+        viewModel.errMsg.observe(this, Observer
+        {
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
         })
     }
@@ -107,4 +114,5 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
     private fun initPokemonData() {
         viewModel.initData()
     }
+
 }

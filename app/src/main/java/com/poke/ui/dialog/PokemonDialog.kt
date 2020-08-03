@@ -3,8 +3,10 @@ package com.poke.ui.dialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.poke.R
 import com.poke.common.BaseFragmentDialog
 import com.poke.common.component.BindViewModelComponent
@@ -44,11 +46,15 @@ class PokemonDialog : BaseFragmentDialog<DialogPokemonBinding>(
         binding.vm = viewModel
         val data =
             arguments?.get(BundleKey.BUNDLE_POKEMON_DATA_KEY) as? PokemonModel ?: PokemonModel()
-        viewModel.setUpPokemonModel(data)
         binding.pokemonDialog = this
 
+        viewModel.getPokemonDetailInfo(data)
     }
 
-    override fun setupObserve() {}
+    override fun setupObserve() {
+        viewModel.errMsg.observe(viewLifecycleOwner, Observer {
+            Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
+        })
 
+    }
 }

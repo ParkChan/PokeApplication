@@ -6,9 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.poke.common.viewmodel.SingleLiveData
-import com.poke.data.repository.PokemonDetailInfoRepository
 import com.poke.data.repository.PokemonListRepository
-import com.poke.data.response.PokemonDetailInfoResponse
 import com.poke.data.response.PokemonListResponse
 import com.poke.data.response.PokemonLocationListResponse
 import com.poke.data.response.mapToModel
@@ -18,8 +16,7 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class MainViewModel @ViewModelInject constructor(
-    private val pokemonListRepository: PokemonListRepository,
-    private val pokemonDetailInfoRepository: PokemonDetailInfoRepository
+    private val pokemonListRepository: PokemonListRepository
 ) : ViewModel() {
 
     private val _pokemonList = MutableLiveData<List<PokemonModel>>()
@@ -125,31 +122,8 @@ class MainViewModel @ViewModelInject constructor(
         }
     }
 
-    private fun getPokemonDetailInfo(pokemonModel: PokemonModel) = viewModelScope.launch {
-        showLoading()
-        var pokemonDetailInfoResponse: PokemonDetailInfoResponse? = null
-        val pokemonDetailInfoDeferred =
-            async { pokemonDetailInfoRepository.getPokemonDetailInfo(pokemonModel.id) }
-
-        when (val networkResult = pokemonDetailInfoDeferred.await()) {
-            is NetworkResult.Success -> {
-                pokemonDetailInfoResponse = networkResult.data
-            }
-            is NetworkResult.Failure -> {
-                _errMsg.value = networkResult.exception.message
-            }
-        }
-
-        pokemonDetailInfoResponse?.let {
-            pokemonModel.detailInfo = pokemonDetailInfoResponse.mapToModel()
-        }
-
-        _selectedItem.value = pokemonModel
-        hideLoading()
-    }
-
     fun onClick(pokemonModel: PokemonModel) {
-        getPokemonDetailInfo(pokemonModel)
+        _selectedItem.value = pokemonModel
     }
 
     private operator fun String.contains(other: String): Boolean =

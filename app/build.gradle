@@ -15,7 +15,7 @@ android {
         versionCode AndroidConfig.VERSION_CODE
         versionName AndroidConfig.VERSION_NAME
 
-        testInstrumentationRunner AndroidConfig.TEST_INSTRUMENTATION_RUNNER
+        testInstrumentationRunner AndroidConfig.TEST_INSTRUMENTATION_CUSTOM_RUNNER
     }
 
     buildTypes {
@@ -87,6 +87,5 @@ dependencies {
 
     implementation Dependencies.GLIDE
     kapt Dependencies.GLIDE_COMPILER
-
 
 }

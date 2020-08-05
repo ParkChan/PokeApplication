@@ -16,6 +16,8 @@ object AndroidConfig {
     const val VERSION_CODE = 1
     const val VERSION_NAME = "1.0.0"
     const val TEST_INSTRUMENTATION_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
+    const val TEST_INSTRUMENTATION_CUSTOM_RUNNER = "com.poke.MyCustomTestRunner"
+
 }
 
 object JetBrain {

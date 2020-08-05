@@ -31,7 +31,7 @@ class MainViewModel @ViewModelInject constructor(
     private val _searchName = MutableLiveData<String>()
     val searchName: LiveData<String> get() = _searchName
 
-    private val _selectedItem = MutableLiveData<PokemonModel>()
+    private val _selectedItem = SingleLiveData<PokemonModel>()
     val selectedItem: LiveData<PokemonModel> get() = _selectedItem
 
     private val pokemonHashSet: MutableSet<PokemonModel> = HashSet()

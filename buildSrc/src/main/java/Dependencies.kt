@@ -39,6 +39,8 @@ object TestDependencies {
     const val JUNIT = "junit:junit:4.13"
     const val EXT_JUNIT = "androidx.test.ext:junit:1.1.1"
     const val ESPRESSO = "androidx.test.espresso:espresso-core:3.2.0"
+    const val ESPRESSO_CONTRIB = "androidx.test.espresso:espresso-contrib:3.2.0"    //recyclerView
+    const val ESPRESSO_INTENT = "androidx.test.espresso:espresso-intents:3.2.0"
 }
 
 object AndroidDxDependencies {

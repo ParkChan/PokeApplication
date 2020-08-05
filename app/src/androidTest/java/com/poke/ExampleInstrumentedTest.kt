@@ -1,20 +1,18 @@
 package com.poke
 
-import android.os.SystemClock
-import android.view.View
-import android.view.ViewGroup
-import android.view.ViewParent
-import androidx.test.core.app.ActivityScenario
+import android.content.Intent
+import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions
+import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.rule.ActivityTestRule
 import com.poke.ui.main.MainActivity
-import org.hamcrest.Description
-import org.hamcrest.Matcher
-import org.hamcrest.TypeSafeMatcher
 import org.junit.Assert.assertEquals
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
@@ -27,6 +25,10 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
 
+    @Rule
+    @JvmField
+    var activityRule = ActivityTestRule(MainActivity::class.java)
+
     @Test
     fun useAppContext() {
         // Context of the app under test.
@@ -36,55 +38,36 @@ class ExampleInstrumentedTest {
 
     @Test
     fun runApp() {
-        ActivityScenario.launch(MainActivity::class.java)
+        activityRule.launchActivity(Intent())
+        testCase("pikachu")
+        testCase("Bulbasaur")
+    }
+
+    private fun testCase(pokemonName: String){
+
         onView(withId(R.id.et_input)).perform(
-            ViewActions.typeText("pikachu"),
+            ViewActions.typeText(pokemonName),
             ViewActions.closeSoftKeyboard()
         )
 
-        SystemClock.sleep(1500)
+        Thread.sleep(1500)          //TODO : 개선필요
 
+        onView(withId(R.id.rv_list))
+            .perform(
+                RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
+                    0,
+                    click()
+                )
+            )
 
-//        onData(anything())
-//            .inAdapterView(withId(R.id.rv_list))
-//            .atPosition(0)
-//            .onChildView(withId(R.id.tv_name))
-//            .atPosition(0)
-//            .onChildView(withId(R.id.tv_name)).perform(click())
+        onView(withId(R.id.ib_map))
+            .perform(click())
 
-//        val recyclerView: ViewInteraction  = onView(
-//                allOf(withId(R.id.rv_list),
-//                    childAtPosition(
-//                        withClassName("android.support.constraint.ConstraintLayout"),
-//                    0)))
-//        recyclerView.perform(actionOnItemAtPosition(0, click()))
+        Thread.sleep(3000)          //TODO : 개선필요
+
+        activityRule.finishActivity()
+
+        onView(withId(R.id.btn_confirm))
+            .perform(click())
     }
-
-
-
-
-}
-
-    private fun childAtPosition(
-        parentMatcher: Matcher<View>, position: Int
-    ): Matcher<View?>? {
-        return object : TypeSafeMatcher<View?>() {
-            override fun describeTo(description: Description) {
-                description.appendText("Child at position $position in parent ")
-                parentMatcher.describeTo(description)
-            }
-
-            override fun matchesSafely(view: View?): Boolean {
-
-                view?.let {
-                    val parent: ViewParent = view.getParent()
-                    return (parent is ViewGroup && parentMatcher.matches(parent)
-                            && view.equals(parent.getChildAt(position)))
-                } ?: return false
-
-            }
-
-        }
-    }
-
 }

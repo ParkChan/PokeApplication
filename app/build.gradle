@@ -48,6 +48,8 @@ dependencies {
     testImplementation TestDependencies.JUNIT
     androidTestImplementation TestDependencies.EXT_JUNIT
     androidTestImplementation TestDependencies.ESPRESSO
+    androidTestImplementation TestDependencies.ESPRESSO_CONTRIB
+    androidTestImplementation TestDependencies.ESPRESSO_INTENT
 
     implementation AndroidDxDependencies.APPCOMPAT
 

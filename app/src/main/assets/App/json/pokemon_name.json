@@ -1,0 +1,2104 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "names": [
+        "이상해씨",
+        "Bulbasaur"
+      ]
+    },
+    {
+      "id": 2,
+      "names": [
+        "이상해풀",
+        "Ivysaur"
+      ]
+    },
+    {
+      "id": 3,
+      "names": [
+        "이상해꽃",
+        "Venusaur"
+      ]
+    },
+    {
+      "id": 4,
+      "names": [
+        "파이리",
+        "Charmander"
+      ]
+    },
+    {
+      "id": 5,
+      "names": [
+        "리자드",
+        "Charmeleon"
+      ]
+    },
+    {
+      "id": 6,
+      "names": [
+        "리자몽",
+        "Charizard"
+      ]
+    },
+    {
+      "id": 7,
+      "names": [
+        "꼬부기",
+        "Squirtle"
+      ]
+    },
+    {
+      "id": 8,
+      "names": [
+        "어니부기",
+        "Wartortle"
+      ]
+    },
+    {
+      "id": 9,
+      "names": [
+        "거북왕",
+        "Blastoise"
+      ]
+    },
+    {
+      "id": 10,
+      "names": [
+        "캐터피",
+        "Caterpie"
+      ]
+    },
+    {
+      "id": 11,
+      "names": [
+        "단데기",
+        "Metapod"
+      ]
+    },
+    {
+      "id": 12,
+      "names": [
+        "버터플",
+        "Butterfree"
+      ]
+    },
+    {
+      "id": 13,
+      "names": [
+        "뿔충이",
+        "Weedle"
+      ]
+    },
+    {
+      "id": 14,
+      "names": [
+        "딱충이",
+        "Kakuna"
+      ]
+    },
+    {
+      "id": 15,
+      "names": [
+        "독침붕",
+        "Beedrill"
+      ]
+    },
+    {
+      "id": 16,
+      "names": [
+        "구구",
+        "Pidgey"
+      ]
+    },
+    {
+      "id": 17,
+      "names": [
+        "피죤",
+        "Pidgeotto"
+      ]
+    },
+    {
+      "id": 18,
+      "names": [
+        "피죤투",
+        "Pidgeot"
+      ]
+    },
+    {
+      "id": 19,
+      "names": [
+        "꼬렛",
+        "Rattata"
+      ]
+    },
+    {
+      "id": 20,
+      "names": [
+        "레트라",
+        "Raticate"
+      ]
+    },
+    {
+      "id": 21,
+      "names": [
+        "깨비참",
+        "Spearow"
+      ]
+    },
+    {
+      "id": 22,
+      "names": [
+        "깨비드릴조",
+        "Fearow"
+      ]
+    },
+    {
+      "id": 23,
+      "names": [
+        "아보",
+        "Ekans"
+      ]
+    },
+    {
+      "id": 24,
+      "names": [
+        "아보크",
+        "Arbok"
+      ]
+    },
+    {
+      "id": 25,
+      "names": [
+        "피카츄",
+        "Pikachu"
+      ]
+    },
+    {
+      "id": 26,
+      "names": [
+        "라이츄",
+        "Raichu"
+      ]
+    },
+    {
+      "id": 27,
+      "names": [
+        "모래두지",
+        "Sandshrew"
+      ]
+    },
+    {
+      "id": 28,
+      "names": [
+        "고지",
+        "Sandslash"
+      ]
+    },
+    {
+      "id": 29,
+      "names": [
+        "니드런♀",
+        "Nidoran♀"
+      ]
+    },
+    {
+      "id": 30,
+      "names": [
+        "니드리나",
+        "Nidorina"
+      ]
+    },
+    {
+      "id": 31,
+      "names": [
+        "니드퀸",
+        "Nidoqueen"
+      ]
+    },
+    {
+      "id": 32,
+      "names": [
+        "니드런♂",
+        "Nidoran♂"
+      ]
+    },
+    {
+      "id": 33,
+      "names": [
+        "니드리노",
+        "Nidorino"
+      ]
+    },
+    {
+      "id": 34,
+      "names": [
+        "니드킹",
+        "Nidoking"
+      ]
+    },
+    {
+      "id": 35,
+      "names": [
+        "삐삐",
+        "Clefairy"
+      ]
+    },
+    {
+      "id": 36,
+      "names": [
+        "픽시",
+        "Clefable"
+      ]
+    },
+    {
+      "id": 37,
+      "names": [
+        "식스테일",
+        "Vulpix"
+      ]
+    },
+    {
+      "id": 38,
+      "names": [
+        "나인테일",
+        "Ninetales"
+      ]
+    },
+    {
+      "id": 39,
+      "names": [
+        "푸린",
+        "Jigglypuff"
+      ]
+    },
+    {
+      "id": 40,
+      "names": [
+        "푸크린",
+        "Wigglytuff"
+      ]
+    },
+    {
+      "id": 41,
+      "names": [
+        "주뱃",
+        "Zubat"
+      ]
+    },
+    {
+      "id": 42,
+      "names": [
+        "골뱃",
+        "Golbat"
+      ]
+    },
+    {
+      "id": 43,
+      "names": [
+        "뚜벅쵸",
+        "Oddish"
+      ]
+    },
+    {
+      "id": 44,
+      "names": [
+        "냄새꼬",
+        "Gloom"
+      ]
+    },
+    {
+      "id": 45,
+      "names": [
+        "라플레시아",
+        "Vileplume"
+      ]
+    },
+    {
+      "id": 46,
+      "names": [
+        "파라스",
+        "Paras"
+      ]
+    },
+    {
+      "id": 47,
+      "names": [
+        "파라섹트",
+        "Parasect"
+      ]
+    },
+    {
+      "id": 48,
+      "names": [
+        "콘팡",
+        "Venonat"
+      ]
+    },
+    {
+      "id": 49,
+      "names": [
+        "도나리",
+        "Venomoth"
+      ]
+    },
+    {
+      "id": 50,
+      "names": [
+        "디그다",
+        "Diglett"
+      ]
+    },
+    {
+      "id": 51,
+      "names": [
+        "닥트리오",
+        "Dugtrio"
+      ]
+    },
+    {
+      "id": 52,
+      "names": [
+        "나옹",
+        "Meowth"
+      ]
+    },
+    {
+      "id": 53,
+      "names": [
+        "페르시온",
+        "Persian"
+      ]
+    },
+    {
+      "id": 54,
+      "names": [
+        "고라파덕",
+        "Psyduck"
+      ]
+    },
+    {
+      "id": 55,
+      "names": [
+        "골덕",
+        "Golduck"
+      ]
+    },
+    {
+      "id": 56,
+      "names": [
+        "망키",
+        "Mankey"
+      ]
+    },
+    {
+      "id": 57,
+      "names": [
+        "성원숭",
+        "Primeape"
+      ]
+    },
+    {
+      "id": 58,
+      "names": [
+        "가디",
+        "Growlithe"
+      ]
+    },
+    {
+      "id": 59,
+      "names": [
+        "윈디",
+        "Arcanine"
+      ]
+    },
+    {
+      "id": 60,
+      "names": [
+        "발챙이",
+        "Poliwag"
+      ]
+    },
+    {
+      "id": 61,
+      "names": [
+        "슈륙챙이",
+        "Poliwhirl"
+      ]
+    },
+    {
+      "id": 62,
+      "names": [
+        "강챙이",
+        "Poliwrath"
+      ]
+    },
+    {
+      "id": 63,
+      "names": [
+        "캐이시",
+        "Abra"
+      ]
+    },
+    {
+      "id": 64,
+      "names": [
+        "윤겔라",
+        "Kadabra"
+      ]
+    },
+    {
+      "id": 65,
+      "names": [
+        "후딘",
+        "Alakazam"
+      ]
+    },
+    {
+      "id": 66,
+      "names": [
+        "알통몬",
+        "Machop"
+      ]
+    },
+    {
+      "id": 67,
+      "names": [
+        "근육몬",
+        "Machoke"
+      ]
+    },
+    {
+      "id": 68,
+      "names": [
+        "괴력몬",
+        "Machamp"
+      ]
+    },
+    {
+      "id": 69,
+      "names": [
+        "모다피",
+        "Bellsprout"
+      ]
+    },
+    {
+      "id": 70,
+      "names": [
+        "우츠동",
+        "Weepinbell"
+      ]
+    },
+    {
+      "id": 71,
+      "names": [
+        "우츠보트",
+        "Victreebel"
+      ]
+    },
+    {
+      "id": 72,
+      "names": [
+        "왕눈해",
+        "Tentacool"
+      ]
+    },
+    {
+      "id": 73,
+      "names": [
+        "독파리",
+        "Tentacruel"
+      ]
+    },
+    {
+      "id": 74,
+      "names": [
+        "꼬마돌",
+        "Geodude"
+      ]
+    },
+    {
+      "id": 75,
+      "names": [
+        "데구리",
+        "Graveler"
+      ]
+    },
+    {
+      "id": 76,
+      "names": [
+        "딱구리",
+        "Golem"
+      ]
+    },
+    {
+      "id": 77,
+      "names": [
+        "포니타",
+        "Ponyta"
+      ]
+    },
+    {
+      "id": 78,
+      "names": [
+        "날쌩마",
+        "Rapidash"
+      ]
+    },
+    {
+      "id": 79,
+      "names": [
+        "야돈",
+        "Slowpoke"
+      ]
+    },
+    {
+      "id": 80,
+      "names": [
+        "야도란",
+        "Slowbro"
+      ]
+    },
+    {
+      "id": 81,
+      "names": [
+        "코일",
+        "Magnemite"
+      ]
+    },
+    {
+      "id": 82,
+      "names": [
+        "레어코일",
+        "Magneton"
+      ]
+    },
+    {
+      "id": 83,
+      "names": [
+        "파오리",
+        "Farfetch"
+      ]
+    },
+    {
+      "id": 84,
+      "names": [
+        "두두",
+        "Doduo"
+      ]
+    },
+    {
+      "id": 85,
+      "names": [
+        "두트리오",
+        "Dodrio"
+      ]
+    },
+    {
+      "id": 86,
+      "names": [
+        "쥬쥬",
+        "Seel"
+      ]
+    },
+    {
+      "id": 87,
+      "names": [
+        "쥬레곤",
+        "Dewgong"
+      ]
+    },
+    {
+      "id": 88,
+      "names": [
+        "질퍽이",
+        "Grimer"
+      ]
+    },
+    {
+      "id": 89,
+      "names": [
+        "질뻐기",
+        "Muk"
+      ]
+    },
+    {
+      "id": 90,
+      "names": [
+        "셀러",
+        "Shellder"
+      ]
+    },
+    {
+      "id": 91,
+      "names": [
+        "파르셀",
+        "Cloyster"
+      ]
+    },
+    {
+      "id": 92,
+      "names": [
+        "고오스",
+        "Gastly"
+      ]
+    },
+    {
+      "id": 93,
+      "names": [
+        "고우스트",
+        "Haunter"
+      ]
+    },
+    {
+      "id": 94,
+      "names": [
+        "팬텀",
+        "Gengar"
+      ]
+    },
+    {
+      "id": 95,
+      "names": [
+        "롱스톤",
+        "Onix"
+      ]
+    },
+    {
+      "id": 96,
+      "names": [
+        "슬리프",
+        "Drowzee"
+      ]
+    },
+    {
+      "id": 97,
+      "names": [
+        "슬리퍼",
+        "Hypno"
+      ]
+    },
+    {
+      "id": 98,
+      "names": [
+        "크랩",
+        "Krabby"
+      ]
+    },
+    {
+      "id": 99,
+      "names": [
+        "킹크랩",
+        "Kingler"
+      ]
+    },
+    {
+      "id": 100,
+      "names": [
+        "찌리리공",
+        "Voltorb"
+      ]
+    },
+    {
+      "id": 101,
+      "names": [
+        "붐볼",
+        "Electrode"
+      ]
+    },
+    {
+      "id": 102,
+      "names": [
+        "아라리",
+        "Exeggcute"
+      ]
+    },
+    {
+      "id": 103,
+      "names": [
+        "나시",
+        "Exeggutor"
+      ]
+    },
+    {
+      "id": 104,
+      "names": [
+        "탕구리",
+        "Cubone"
+      ]
+    },
+    {
+      "id": 105,
+      "names": [
+        "텅구리",
+        "Marowak"
+      ]
+    },
+    {
+      "id": 106,
+      "names": [
+        "시라소몬",
+        "Hitmonlee"
+      ]
+    },
+    {
+      "id": 107,
+      "names": [
+        "홍수몬",
+        "Hitmonchan"
+      ]
+    },
+    {
+      "id": 108,
+      "names": [
+        "내루미",
+        "Lickitung"
+      ]
+    },
+    {
+      "id": 109,
+      "names": [
+        "또가스",
+        "Koffing"
+      ]
+    },
+    {
+      "id": 110,
+      "names": [
+        "또도가스",
+        "Weezing"
+      ]
+    },
+    {
+      "id": 111,
+      "names": [
+        "뿔카노",
+        "Rhyhorn"
+      ]
+    },
+    {
+      "id": 112,
+      "names": [
+        "코뿌리",
+        "Rhydon"
+      ]
+    },
+    {
+      "id": 113,
+      "names": [
+        "럭키",
+        "Chansey"
+      ]
+    },
+    {
+      "id": 114,
+      "names": [
+        "덩쿠리",
+        "Tangela"
+      ]
+    },
+    {
+      "id": 115,
+      "names": [
+        "캥카",
+        "Kangaskhan"
+      ]
+    },
+    {
+      "id": 116,
+      "names": [
+        "쏘드라",
+        "Horsea"
+      ]
+    },
+    {
+      "id": 117,
+      "names": [
+        "시드라",
+        "Seadra"
+      ]
+    },
+    {
+      "id": 118,
+      "names": [
+        "콘치",
+        "Goldeen"
+      ]
+    },
+    {
+      "id": 119,
+      "names": [
+        "왕콘치",
+        "Seaking"
+      ]
+    },
+    {
+      "id": 120,
+      "names": [
+        "별가사리",
+        "Staryu"
+      ]
+    },
+    {
+      "id": 121,
+      "names": [
+        "아쿠스타",
+        "Starmie"
+      ]
+    },
+    {
+      "id": 122,
+      "names": [
+        "마임맨",
+        "Mr"
+      ]
+    },
+    {
+      "id": 123,
+      "names": [
+        "스라크",
+        "Scyther"
+      ]
+    },
+    {
+      "id": 124,
+      "names": [
+        "루주라",
+        "Jynx"
+      ]
+    },
+    {
+      "id": 125,
+      "names": [
+        "에레브",
+        "Electabuzz"
+      ]
+    },
+    {
+      "id": 126,
+      "names": [
+        "마그마",
+        "Magmar"
+      ]
+    },
+    {
+      "id": 127,
+      "names": [
+        "쁘사이저",
+        "Pinsir"
+      ]
+    },
+    {
+      "id": 128,
+      "names": [
+        "켄타로스",
+        "Tauros"
+      ]
+    },
+    {
+      "id": 129,
+      "names": [
+        "잉어킹",
+        "Magikarp"
+      ]
+    },
+    {
+      "id": 130,
+      "names": [
+        "갸라도스",
+        "Gyarados"
+      ]
+    },
+    {
+      "id": 131,
+      "names": [
+        "라프라스",
+        "Lapras"
+      ]
+    },
+    {
+      "id": 132,
+      "names": [
+        "메타몽",
+        "Ditto"
+      ]
+    },
+    {
+      "id": 133,
+      "names": [
+        "이브이",
+        "Eevee"
+      ]
+    },
+    {
+      "id": 134,
+      "names": [
+        "샤미드",
+        "Vaporeon"
+      ]
+    },
+    {
+      "id": 135,
+      "names": [
+        "쥬피썬더",
+        "Jolteon"
+      ]
+    },
+    {
+      "id": 136,
+      "names": [
+        "부스터",
+        "Flareon"
+      ]
+    },
+    {
+      "id": 137,
+      "names": [
+        "폴리곤",
+        "Porygon"
+      ]
+    },
+    {
+      "id": 138,
+      "names": [
+        "암나이트",
+        "Omanyte"
+      ]
+    },
+    {
+      "id": 139,
+      "names": [
+        "암스타",
+        "Omastar"
+      ]
+    },
+    {
+      "id": 140,
+      "names": [
+        "투구",
+        "Kabuto"
+      ]
+    },
+    {
+      "id": 141,
+      "names": [
+        "투구푸스",
+        "Kabutops"
+      ]
+    },
+    {
+      "id": 142,
+      "names": [
+        "프테라",
+        "Aerodactyl"
+      ]
+    },
+    {
+      "id": 143,
+      "names": [
+        "잠만보",
+        "Snorlax"
+      ]
+    },
+    {
+      "id": 144,
+      "names": [
+        "프리져",
+        "Articuno"
+      ]
+    },
+    {
+      "id": 145,
+      "names": [
+        "썬더",
+        "Zapdos"
+      ]
+    },
+    {
+      "id": 146,
+      "names": [
+        "파이어",
+        "Moltres"
+      ]
+    },
+    {
+      "id": 147,
+      "names": [
+        "미뇽",
+        "Dratini"
+      ]
+    },
+    {
+      "id": 148,
+      "names": [
+        "신뇽",
+        "Dragonair"
+      ]
+    },
+    {
+      "id": 149,
+      "names": [
+        "망나뇽",
+        "Dragonite"
+      ]
+    },
+    {
+      "id": 150,
+      "names": [
+        "뮤츠",
+        "Mewtwo"
+      ]
+    },
+    {
+      "id": 151,
+      "names": [
+        "뮤",
+        "Mew"
+      ]
+    },
+    {
+      "id": 152,
+      "names": [
+        "치코리타",
+        "Chikorita"
+      ]
+    },
+    {
+      "id": 153,
+      "names": [
+        "베이리프",
+        "Bayleef"
+      ]
+    },
+    {
+      "id": 154,
+      "names": [
+        "메가니움",
+        "Meganium"
+      ]
+    },
+    {
+      "id": 155,
+      "names": [
+        "브케인",
+        "Cyndaquil"
+      ]
+    },
+    {
+      "id": 156,
+      "names": [
+        "마그케인",
+        "Quilava"
+      ]
+    },
+    {
+      "id": 157,
+      "names": [
+        "블레이범",
+        "Typhlosion"
+      ]
+    },
+    {
+      "id": 158,
+      "names": [
+        "리아코",
+        "Totodile"
+      ]
+    },
+    {
+      "id": 159,
+      "names": [
+        "엘리게이",
+        "Croconaw"
+      ]
+    },
+    {
+      "id": 160,
+      "names": [
+        "장크로다일",
+        "Feraligatr"
+      ]
+    },
+    {
+      "id": 161,
+      "names": [
+        "꼬리선",
+        "Sentret"
+      ]
+    },
+    {
+      "id": 162,
+      "names": [
+        "다꼬리",
+        "Furret"
+      ]
+    },
+    {
+      "id": 163,
+      "names": [
+        "부우부",
+        "Hoothoot"
+      ]
+    },
+    {
+      "id": 164,
+      "names": [
+        "야부엉",
+        "Noctowl"
+      ]
+    },
+    {
+      "id": 165,
+      "names": [
+        "레디바",
+        "Ledyba"
+      ]
+    },
+    {
+      "id": 166,
+      "names": [
+        "레디안",
+        "Ledian"
+      ]
+    },
+    {
+      "id": 167,
+      "names": [
+        "페이검",
+        "Spinarak"
+      ]
+    },
+    {
+      "id": 168,
+      "names": [
+        "아리아도스",
+        "Ariados"
+      ]
+    },
+    {
+      "id": 169,
+      "names": [
+        "크로뱃",
+        "Crobat"
+      ]
+    },
+    {
+      "id": 170,
+      "names": [
+        "초라기",
+        "Chinchou"
+      ]
+    },
+    {
+      "id": 171,
+      "names": [
+        "랜턴",
+        "Lanturn"
+      ]
+    },
+    {
+      "id": 172,
+      "names": [
+        "피츄",
+        "Pichu"
+      ]
+    },
+    {
+      "id": 173,
+      "names": [
+        "삐",
+        "Cleffa"
+      ]
+    },
+    {
+      "id": 174,
+      "names": [
+        "푸푸린",
+        "Igglybuff"
+      ]
+    },
+    {
+      "id": 175,
+      "names": [
+        "토게피",
+        "Togepi"
+      ]
+    },
+    {
+      "id": 176,
+      "names": [
+        "토게틱",
+        "Togetic"
+      ]
+    },
+    {
+      "id": 177,
+      "names": [
+        "네이티",
+        "Natu"
+      ]
+    },
+    {
+      "id": 178,
+      "names": [
+        "네이티오",
+        "Xatu"
+      ]
+    },
+    {
+      "id": 179,
+      "names": [
+        "메리프",
+        "Mareep"
+      ]
+    },
+    {
+      "id": 180,
+      "names": [
+        "보송송",
+        "Flaaffy"
+      ]
+    },
+    {
+      "id": 181,
+      "names": [
+        "전룡",
+        "Ampharos"
+      ]
+    },
+    {
+      "id": 182,
+      "names": [
+        "아르코",
+        "Bellossom"
+      ]
+    },
+    {
+      "id": 183,
+      "names": [
+        "마릴",
+        "Marill"
+      ]
+    },
+    {
+      "id": 184,
+      "names": [
+        "마릴리",
+        "Azumarill"
+      ]
+    },
+    {
+      "id": 185,
+      "names": [
+        "꼬지모",
+        "Sudowoodo"
+      ]
+    },
+    {
+      "id": 186,
+      "names": [
+        "왕구리",
+        "Politoed"
+      ]
+    },
+    {
+      "id": 187,
+      "names": [
+        "통통코",
+        "Hoppip"
+      ]
+    },
+    {
+      "id": 188,
+      "names": [
+        "두코",
+        "Skiploom"
+      ]
+    },
+    {
+      "id": 189,
+      "names": [
+        "솜솜코",
+        "Jumpluff"
+      ]
+    },
+    {
+      "id": 190,
+      "names": [
+        "에이팜",
+        "Aipom"
+      ]
+    },
+    {
+      "id": 191,
+      "names": [
+        "해너츠",
+        "Sunkern"
+      ]
+    },
+    {
+      "id": 192,
+      "names": [
+        "해루미",
+        "Sunflora"
+      ]
+    },
+    {
+      "id": 193,
+      "names": [
+        "왕자리",
+        "Yanma"
+      ]
+    },
+    {
+      "id": 194,
+      "names": [
+        "우파",
+        "Wooper"
+      ]
+    },
+    {
+      "id": 195,
+      "names": [
+        "누오",
+        "Quagsire"
+      ]
+    },
+    {
+      "id": 196,
+      "names": [
+        "에브이",
+        "Espeon"
+      ]
+    },
+    {
+      "id": 197,
+      "names": [
+        "블래키",
+        "Umbreon"
+      ]
+    },
+    {
+      "id": 198,
+      "names": [
+        "니로우",
+        "Murkrow"
+      ]
+    },
+    {
+      "id": 199,
+      "names": [
+        "야도킹",
+        "Slowking"
+      ]
+    },
+    {
+      "id": 200,
+      "names": [
+        "무우마",
+        "Misdreavus"
+      ]
+    },
+    {
+      "id": 201,
+      "names": [
+        "안농",
+        "Unown"
+      ]
+    },
+    {
+      "id": 202,
+      "names": [
+        "마자용",
+        "Wobbuffet"
+      ]
+    },
+    {
+      "id": 203,
+      "names": [
+        "키링키",
+        "Girafarig"
+      ]
+    },
+    {
+      "id": 204,
+      "names": [
+        "피콘",
+        "Pineco"
+      ]
+    },
+    {
+      "id": 205,
+      "names": [
+        "쏘콘",
+        "Forretress"
+      ]
+    },
+    {
+      "id": 206,
+      "names": [
+        "노고치",
+        "Dunsparce"
+      ]
+    },
+    {
+      "id": 207,
+      "names": [
+        "글라이거",
+        "Gligar"
+      ]
+    },
+    {
+      "id": 208,
+      "names": [
+        "강철톤",
+        "Steelix"
+      ]
+    },
+    {
+      "id": 209,
+      "names": [
+        "블루",
+        "Snubbull"
+      ]
+    },
+    {
+      "id": 210,
+      "names": [
+        "그랑블루",
+        "Granbull"
+      ]
+    },
+    {
+      "id": 211,
+      "names": [
+        "침바루",
+        "Qwilfish"
+      ]
+    },
+    {
+      "id": 212,
+      "names": [
+        "핫삼",
+        "Scizor"
+      ]
+    },
+    {
+      "id": 213,
+      "names": [
+        "단단지",
+        "Shuckle"
+      ]
+    },
+    {
+      "id": 214,
+      "names": [
+        "헤라크로스",
+        "Heracross"
+      ]
+    },
+    {
+      "id": 215,
+      "names": [
+        "포푸니",
+        "Sneasel"
+      ]
+    },
+    {
+      "id": 216,
+      "names": [
+        "깜지곰",
+        "Teddiursa"
+      ]
+    },
+    {
+      "id": 217,
+      "names": [
+        "링곰",
+        "Ursaring"
+      ]
+    },
+    {
+      "id": 218,
+      "names": [
+        "마그마그",
+        "Slugma"
+      ]
+    },
+    {
+      "id": 219,
+      "names": [
+        "마그카르고",
+        "Magcargo"
+      ]
+    },
+    {
+      "id": 220,
+      "names": [
+        "꾸꾸리",
+        "Swinub"
+      ]
+    },
+    {
+      "id": 221,
+      "names": [
+        "메꾸리",
+        "Piloswine"
+      ]
+    },
+    {
+      "id": 222,
+      "names": [
+        "코산호",
+        "Corsola"
+      ]
+    },
+    {
+      "id": 223,
+      "names": [
+        "총어",
+        "Remoraid"
+      ]
+    },
+    {
+      "id": 224,
+      "names": [
+        "대포무노",
+        "Octillery"
+      ]
+    },
+    {
+      "id": 225,
+      "names": [
+        "딜리버드",
+        "Delibird"
+      ]
+    },
+    {
+      "id": 226,
+      "names": [
+        "만타인",
+        "Mantine"
+      ]
+    },
+    {
+      "id": 227,
+      "names": [
+        "무장조",
+        "Skarmory"
+      ]
+    },
+    {
+      "id": 228,
+      "names": [
+        "델빌",
+        "Houndour"
+      ]
+    },
+    {
+      "id": 229,
+      "names": [
+        "헬가",
+        "Houndoom"
+      ]
+    },
+    {
+      "id": 230,
+      "names": [
+        "킹드라",
+        "Kingdra"
+      ]
+    },
+    {
+      "id": 231,
+      "names": [
+        "코코리",
+        "Phanpy"
+      ]
+    },
+    {
+      "id": 232,
+      "names": [
+        "코리갑",
+        "Donphan"
+      ]
+    },
+    {
+      "id": 233,
+      "names": [
+        "폴리곤2",
+        "Porygon2"
+      ]
+    },
+    {
+      "id": 234,
+      "names": [
+        "노라키",
+        "Stantler"
+      ]
+    },
+    {
+      "id": 235,
+      "names": [
+        "루브도",
+        "Smeargle"
+      ]
+    },
+    {
+      "id": 236,
+      "names": [
+        "배루키",
+        "Tyrogue"
+      ]
+    },
+    {
+      "id": 237,
+      "names": [
+        "카포에라",
+        "Hitmontop"
+      ]
+    },
+    {
+      "id": 238,
+      "names": [
+        "뽀뽀라",
+        "Smoochum"
+      ]
+    },
+    {
+      "id": 239,
+      "names": [
+        "에레키드",
+        "Elekid"
+      ]
+    },
+    {
+      "id": 240,
+      "names": [
+        "마그비",
+        "Magby"
+      ]
+    },
+    {
+      "id": 241,
+      "names": [
+        "밀탱크",
+        "Miltank"
+      ]
+    },
+    {
+      "id": 242,
+      "names": [
+        "해피너스",
+        "Blissey"
+      ]
+    },
+    {
+      "id": 243,
+      "names": [
+        "라이코",
+        "Raikou"
+      ]
+    },
+    {
+      "id": 244,
+      "names": [
+        "앤테이",
+        "Entei"
+      ]
+    },
+    {
+      "id": 245,
+      "names": [
+        "스이쿤",
+        "Suicune"
+      ]
+    },
+    {
+      "id": 246,
+      "names": [
+        "애버라스",
+        "Larvitar"
+      ]
+    },
+    {
+      "id": 247,
+      "names": [
+        "데기라스",
+        "Pupitar"
+      ]
+    },
+    {
+      "id": 248,
+      "names": [
+        "마기라스",
+        "Tyranitar"
+      ]
+    },
+    {
+      "id": 249,
+      "names": [
+        "루기아",
+        "Lugia"
+      ]
+    },
+    {
+      "id": 250,
+      "names": [
+        "칠색조",
+        "Ho"
+      ]
+    },
+    {
+      "id": 251,
+      "names": [
+        "세레비",
+        "Celebi"
+      ]
+    },
+    {
+      "id": 252,
+      "names": [
+        "나무지기",
+        "Treecko"
+      ]
+    },
+    {
+      "id": 253,
+      "names": [
+        "나무돌이",
+        "Grovyle"
+      ]
+    },
+    {
+      "id": 254,
+      "names": [
+        "나무킹",
+        "Sceptile"
+      ]
+    },
+    {
+      "id": 255,
+      "names": [
+        "아차모",
+        "Torchic"
+      ]
+    },
+    {
+      "id": 256,
+      "names": [
+        "영치코",
+        "Combusken"
+      ]
+    },
+    {
+      "id": 257,
+      "names": [
+        "번치코",
+        "Blaziken"
+      ]
+    },
+    {
+      "id": 258,
+      "names": [
+        "물짱이",
+        "Mudkip"
+      ]
+    },
+    {
+      "id": 259,
+      "names": [
+        "늪짱이",
+        "Marshtomp"
+      ]
+    },
+    {
+      "id": 260,
+      "names": [
+        "대짱이",
+        "Swampert"
+      ]
+    },
+    {
+      "id": 261,
+      "names": [
+        "포챠나",
+        "Poochyena"
+      ]
+    },
+    {
+      "id": 262,
+      "names": [
+        "그라에나",
+        "Mightyena"
+      ]
+    },
+    {
+      "id": 263,
+      "names": [
+        "지그제구리",
+        "Zigzagoon"
+      ]
+    },
+    {
+      "id": 264,
+      "names": [
+        "직구리",
+        "Linoone"
+      ]
+    },
+    {
+      "id": 265,
+      "names": [
+        "개무소",
+        "Wurmple"
+      ]
+    },
+    {
+      "id": 266,
+      "names": [
+        "실쿤",
+        "Silcoon"
+      ]
+    },
+    {
+      "id": 267,
+      "names": [
+        "뷰티플라이",
+        "Beautifly"
+      ]
+    },
+    {
+      "id": 268,
+      "names": [
+        "카스쿤",
+        "Cascoon"
+      ]
+    },
+    {
+      "id": 269,
+      "names": [
+        "독케일",
+        "Dustox"
+      ]
+    },
+    {
+      "id": 270,
+      "names": [
+        "연꽃몬",
+        "Lotad"
+      ]
+    },
+    {
+      "id": 271,
+      "names": [
+        "로토스",
+        "Lombre"
+      ]
+    },
+    {
+      "id": 272,
+      "names": [
+        "로파파",
+        "Ludicolo"
+      ]
+    },
+    {
+      "id": 273,
+      "names": [
+        "도토링",
+        "Seedot"
+      ]
+    },
+    {
+      "id": 274,
+      "names": [
+        "잎새코",
+        "Nuzleaf"
+      ]
+    },
+    {
+      "id": 275,
+      "names": [
+        "다탱구",
+        "Shiftry"
+      ]
+    },
+    {
+      "id": 276,
+      "names": [
+        "테일로",
+        "Taillow"
+      ]
+    },
+    {
+      "id": 277,
+      "names": [
+        "스왈로",
+        "Swellow"
+      ]
+    },
+    {
+      "id": 278,
+      "names": [
+        "갈모매",
+        "Wingull"
+      ]
+    },
+    {
+      "id": 279,
+      "names": [
+        "패리퍼",
+        "Pelipper"
+      ]
+    },
+    {
+      "id": 280,
+      "names": [
+        "랄토스",
+        "Ralts"
+      ]
+    },
+    {
+      "id": 281,
+      "names": [
+        "킬리아",
+        "Kirlia"
+      ]
+    },
+    {
+      "id": 282,
+      "names": [
+        "가디안",
+        "Gardevoir"
+      ]
+    },
+    {
+      "id": 283,
+      "names": [
+        "비구술",
+        "Surskit"
+      ]
+    },
+    {
+      "id": 284,
+      "names": [
+        "비나방",
+        "Masquerain"
+      ]
+    },
+    {
+      "id": 285,
+      "names": [
+        "버섯꼬",
+        "Shroomish"
+      ]
+    },
+    {
+      "id": 286,
+      "names": [
+        "버섯모",
+        "Breloom"
+      ]
+    },
+    {
+      "id": 287,
+      "names": [
+        "게을로",
+        "Slakoth"
+      ]
+    },
+    {
+      "id": 288,
+      "names": [
+        "발바로",
+        "Vigoroth"
+      ]
+    },
+    {
+      "id": 289,
+      "names": [
+        "게을킹",
+        "Slaking"
+      ]
+    },
+    {
+      "id": 290,
+      "names": [
+        "토중몬",
+        "Nincada"
+      ]
+    },
+    {
+      "id": 291,
+      "names": [
+        "아이스크",
+        "Ninjask"
+      ]
+    },
+    {
+      "id": 292,
+      "names": [
+        "껍질몬",
+        "Shedinja"
+      ]
+    },
+    {
+      "id": 293,
+      "names": [
+        "소곤룡",
+        "Whismur"
+      ]
+    },
+    {
+      "id": 294,
+      "names": [
+        "노공룡",
+        "Loudred"
+      ]
+    },
+    {
+      "id": 295,
+      "names": [
+        "폭음룡",
+        "Exploud"
+      ]
+    },
+    {
+      "id": 296,
+      "names": [
+        "마크탕",
+        "Makuhita"
+      ]
+    },
+    {
+      "id": 297,
+      "names": [
+        "하리뭉",
+        "Hariyama"
+      ]
+    },
+    {
+      "id": 298,
+      "names": [
+        "루리리",
+        "Azurill"
+      ]
+    },
+    {
+      "id": 299,
+      "names": [
+        "코코파스",
+        "Nosepass"
+      ]
+    },
+    {
+      "id": 300,
+      "names": [
+        "에나비",
+        "Skitty"
+      ]
+    }
+  ]
+}
